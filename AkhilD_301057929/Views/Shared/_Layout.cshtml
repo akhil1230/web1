@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="~/Centenniallogo.png" />
+        </div>
+        <ul id="navbar">
+            <li>@Html.ActionLink("Home","Index","Home")</li>
+            <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+            <li>@Html.ActionLink("Add Courses", "Create", "Courses")</li>
+            <li>@Html.ActionLink("Faculty", "Index", "Faculties")</li>
+            <li>@Html.ActionLink("Add Faculty", "Create", "Faculties")</li>
+            <li>@Html.ActionLink("Assign Faculties", "Create", "AssignFaculties")</li>
+        </ul>
+        
+
+    </div>
+    @RenderBody()
+</body>
+</html>

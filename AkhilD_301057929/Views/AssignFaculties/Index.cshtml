@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AkhilD_301057929.Models.AssignFaculty>
+
+
+
+
+
+<table id="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty.firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty.lastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.courseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.courseDepartment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faculty.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faculty.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.courseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.courseDepartment)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.classId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.classId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
